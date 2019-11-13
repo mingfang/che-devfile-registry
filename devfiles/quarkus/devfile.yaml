@@ -32,9 +32,12 @@ components:
     volumes:
       - name: m2
         containerPath: /home/user/.m2
+    endpoints:
+      - name: 'quarkus-getting-started'
+        port: 8080    
 commands:
   -
-    name: maven build
+    name: maven package
     actions:
       -
         type: exec
